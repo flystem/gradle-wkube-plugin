@@ -1,0 +1,20 @@
+plugins {
+    id 'java'
+    id 'com.flystem.wukong.kube'
+}
+
+repositories {
+//    maven { url 'https://maven.aliyun.com/repository/public/' }
+    mavenCentral()
+}
+dependencies {
+
+
+}
+
+wkube{
+    kubeconfig = "kubeconfig-test.yaml"
+    data{
+        namespace=getProject().name
+    }
+}

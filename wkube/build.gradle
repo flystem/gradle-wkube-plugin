@@ -1,0 +1,26 @@
+plugins {
+    id 'java-gradle-plugin'
+}
+version "0.0.1"
+gradlePlugin {
+    website = 'https://github.com/flystem/gradle-kubernetes-plugin'
+    vcsUrl = 'https://github.com/flystem/gradle-kubernetes-plugin'
+    plugins {
+        WKubePlugin {
+            id = 'com.flystem.wukong.kube'
+            implementationClass = 'com.flystem.wukong.grade.kube.WKubePlugin'
+            displayName = 'Plugin for deploy to kubernetes'
+            description = 'A plugin that helps you deploy to kubernetes'
+            tags.addAll('kubernetes','k8s','kube')
+        }
+    }
+}
+
+repositories {
+    mavenCentral()
+    //    maven { url 'https://maven.aliyun.com/repository/public/' }
+}
+dependencies {
+    implementation 'org.freemarker:freemarker:2.3.32'
+    implementation 'commons-io:commons-io:2.15.1'
+}
