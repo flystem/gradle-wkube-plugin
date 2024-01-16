@@ -1,4 +1,4 @@
-# gradle-kubernetes-plugin
+# gradle-wkube-plugin
 ## requirements:
 - [kubectl](https://kubernetes.io/docs/tasks/tools/)
 ## config
