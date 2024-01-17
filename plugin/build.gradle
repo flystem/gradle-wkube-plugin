@@ -2,13 +2,18 @@ plugins {
     id 'java-gradle-plugin'
     id 'com.gradle.plugin-publish' version '1.2.1'
 }
-group "com.flystem.wukong.gradle"
-version "0.0.1"
+group "io.github.flystem.wukong"
+version "0.0.2"
 
 java {
     sourceCompatibility = '17'
 }
-
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
+}
+tasks.withType(Javadoc) {
+    options.encoding = "UTF-8"
+}
 gradlePlugin {
     website = 'https://github.com/flystem/wukong-gradle-plugin'
     vcsUrl = 'https://github.com/flystem/wukong-gradle-plugin'

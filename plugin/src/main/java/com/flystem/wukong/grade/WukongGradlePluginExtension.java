@@ -25,7 +25,6 @@ abstract public class WukongGradlePluginExtension {
 
     /**
      * generated deployment file, default:build/kube/deployment.yaml
-     * @return
      */
     abstract public RegularFileProperty getDeploymentFile();
 
@@ -42,7 +41,7 @@ abstract public class WukongGradlePluginExtension {
      * } <br/>
      * There are version,name,displayName those come from project <br />
      * In data config block,you should use getProject() instead of project
-     * @param action
+     *
      */
     public void data(Action<MapProperty<String, Object>> action) {
         action.execute(getData());
