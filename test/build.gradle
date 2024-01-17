@@ -21,6 +21,8 @@ tasks.withType(Javadoc) {
 }
 wukong{
     kubeconfig = "kubeconfig-test.yaml"
+    templateFile = layout.projectDirectory.file("src/main/wukong/deployment.yaml")
+    deploymentFile = layout.buildDirectory.file("wukong/deployment.yaml")
     data{
         namespace=getProject().name
     }
