@@ -11,4 +11,4 @@ wKube{
 }
 ```
 ## template
-Template file path is src/main/wkube/deployment.yaml
+Template file path is src/main/wukong/deployment.yaml

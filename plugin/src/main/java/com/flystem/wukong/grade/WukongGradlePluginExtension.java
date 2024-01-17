@@ -1,4 +1,4 @@
-package com.flystem.wukong.grade.kube;
+package com.flystem.wukong.grade;
 
 import org.gradle.api.Action;
 import org.gradle.api.Project;
@@ -10,7 +10,7 @@ import org.gradle.api.tasks.Nested;
 import java.util.HashMap;
 import java.util.Map;
 
-abstract public class WKubePluginExtension {
+abstract public class WukongGradlePluginExtension {
     /**
      * kubeconfig in $HOME/.kube directory
      * @return

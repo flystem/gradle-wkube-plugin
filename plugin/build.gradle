@@ -2,18 +2,23 @@ plugins {
     id 'java-gradle-plugin'
     id 'com.gradle.plugin-publish' version '1.2.1'
 }
-group "com.flystem.wukong.kube"
+group "com.flystem.wukong.gradle"
 version "0.0.1"
+
+java {
+    sourceCompatibility = '17'
+}
+
 gradlePlugin {
-    website = 'https://github.com/flystem/gradle-kubernetes-plugin'
-    vcsUrl = 'https://github.com/flystem/gradle-kubernetes-plugin'
+    website = 'https://github.com/flystem/wukong-gradle-plugin'
+    vcsUrl = 'https://github.com/flystem/wukong-gradle-plugin'
     plugins {
-        WKubePlugin {
-            id = 'com.flystem.wukong.kube'
-            implementationClass = 'com.flystem.wukong.grade.kube.WKubePlugin'
+        WukongGradlePlugin {
+            id = 'com.flystem.wukong'
+            implementationClass = 'com.flystem.wukong.grade.WukongGradlePlugin'
             displayName = 'Plugin for deploy to kubernetes'
             description = 'A plugin that helps you deploy to kubernetes'
-            tags.addAll('kubernetes','k8s','kube')
+            tags.addAll('kubernetes','k8s','kube',"wukong")
         }
     }
 }

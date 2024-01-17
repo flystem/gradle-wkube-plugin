@@ -1,4 +1,4 @@
-package com.flystem.wukong.grade.kube;
+package com.flystem.wukong.grade;
 
 import freemarker.template.Configuration;
 import freemarker.template.Template;

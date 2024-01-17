@@ -1,4 +1,4 @@
-package com.flystem.wukong.grade.kube;
+package com.flystem.wukong.grade;
 
 import org.gradle.api.DefaultTask;
 import org.gradle.api.provider.MapProperty;

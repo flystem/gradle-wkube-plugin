@@ -1,4 +1,4 @@
-package com.flystem.wukong.grade.kube;
+package com.flystem.wukong.grade;
 
 
 import org.gradle.api.Plugin;
@@ -10,8 +10,8 @@ import org.gradle.api.tasks.TaskProvider;
 
 import java.util.List;
 
-public class WKubePlugin implements Plugin<Project> {
-    public static final String GROUP_NAME = "wkube";
+public class WukongGradlePlugin implements Plugin<Project> {
+    public static final String GROUP_NAME = "wukong";
 
     public RegularFile defaultTemplateFile(Project project) {
         return project.getLayout().getProjectDirectory().dir("src").dir("main").dir(GROUP_NAME).file("deployment.yaml");
@@ -26,8 +26,8 @@ public class WKubePlugin implements Plugin<Project> {
 
     @Override
     public void apply(Project project) {
-        WKubePluginExtension extension =
-                project.getExtensions().create(GROUP_NAME, WKubePluginExtension.class);
+        WukongGradlePluginExtension extension =
+                project.getExtensions().create(GROUP_NAME, WukongGradlePluginExtension.class);
 
         extension.getTemplateFile().convention(defaultTemplateFile(project));
         extension.getDeploymentFile().convention(defaultDeploymentFile(project, extension.getTemplateFile()));
