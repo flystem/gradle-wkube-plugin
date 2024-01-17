@@ -1,4 +1,4 @@
-# gradle-wkube-plugin
+# wukong-gradle-plugin
 ## requirements:
 - [kubectl](https://kubernetes.io/docs/tasks/tools/)
 ## config

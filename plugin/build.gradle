@@ -14,7 +14,7 @@ gradlePlugin {
     vcsUrl = 'https://github.com/flystem/wukong-gradle-plugin'
     plugins {
         WukongGradlePlugin {
-            id = 'com.flystem.wukong'
+            id = 'io.github.flystem.wukong'
             implementationClass = 'com.flystem.wukong.grade.WukongGradlePlugin'
             displayName = 'Plugin for deploy to kubernetes'
             description = 'A plugin that helps you deploy to kubernetes'
